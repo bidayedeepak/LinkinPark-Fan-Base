@@ -1,0 +1,101 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg {
+  background-image: url('../images/comingsoon/img.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+.topleft img{
+  width: 160px;
+  height: 40px;
+  margin-left: 150px;
+}
+.topleft img:hover{
+  -moz-box-shadow: 0 0 20px #ccc;
+      -webkit-box-shadow: 0 0 20px #ccc;
+      box-shadow: 0 0 20px #ccc;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+  }
+#demo{
+  -moz-text-shadow: 0 0 20px #ccc;
+      -webkit-text-shadow: 0 0 20px #ccc;
+      text-shadow: 0 0 20px #ccc;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  -moz-text-shadow: 0 0 20px #ccc;
+      -webkit-text-shadow: 0 0 20px #ccc;
+      text-shadow: 0 0 20px #ccc;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+
+/*----- Footer -----*/
+
+
+footer{
+  margin-top: 20px;
+  /*padding-left: 40%;*/
+  width: 100%;
+  /*padding-top: 01%;*/
+  text-align: center;
+  background-color: transparent;
+}
+.social-icon a{
+  margin: 0 0px 0px 0px;
+  display: inline-block;
+}
+.social-icon .fab{
+  font-size: 25px;
+  color: rgb(60, 60, 60);
+  text-shadow: 3px 3px 6px rgb(240, 240, 240);
+  width: 30px;
+  height: 405;
+  /*border-radius: 60%;*/
+  background: transparent;
+  line-height: 1.7;
+  transition: .1s;
+  /*border: 3px solid rgba(255, 255, 255, 0.8);*/
+}
+.social-icon .fab:hover{
+  color: rgb(255, 255, 255);
+}
+.social-icon a:hover .fab{
+  /*border: 3px solid rgb(255, 255, 255);*/
+  transform: translateY(-5px);
+}
+.white{
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+/*----- Footer -----*/

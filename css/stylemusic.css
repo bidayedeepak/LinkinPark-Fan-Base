@@ -1,0 +1,543 @@
+/*------ navbar and logo ------*/
+/* note */
+.note{
+  color: white;
+  font-family: 'Baloo Thambi 2', cursive;
+  text-align: center;
+  background-color: rgba(60, 60, 60, 0.5);
+}
+.note p{
+  color: red;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+  /* note end */
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body{
+	background-image: url("../images/bg.jpg");
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-attachment: fixed;
+}
+#imghover:hover {
+    -moz-box-shadow: 0 0 20px #ccc;
+    -webkit-box-shadow: 0 0 20px #ccc;
+    box-shadow: 0 0 20px #ccc;
+}
+nav{
+  height: 70px;
+}
+nav img{
+	position: absolute;
+	width: 150px;
+	top: 17px;
+	left: 12%;
+}
+nav ul{
+  float: right;
+  margin-right: 25px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 70px;
+  margin: 0 20px;
+}
+nav ul li a{
+  position: relative;
+  padding: 5px 0;
+  color: rgba(240, 240, 240, 0.6);
+  font-size: 15px;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+#blink1{
+  transition:2s;
+}
+/* nav ul li a:hover{
+	-moz-text-shadow: 0 0 70px white;
+   -webkit-text-shadow: 0 0 70px white;
+      text-shadow: 0 0 70px white;
+}
+#blink{
+      transition:2s;
+}
+#blink1{
+      transition:2s;
+}
+nav ul li a:before{
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .4s linear;
+}
+nav ul li a:hover:before{
+  transform: scaleX(1);
+  transform-origin: left;
+} */
+nav ul li a:hover{
+	/* -moz-text-shadow: 0 0 70px white;
+  -webkit-text-shadow: 0 0 70px white;
+  text-shadow: 0 0 70px white; */
+  color: white;
+}
+#blink{
+  transition:2s;
+}
+/* nav ul li a:before{
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .4s linear;
+} */
+/* nav ul li a:hover:before{
+  transform: scaleX(1);
+  transform-origin: right;
+} */
+label #btn,
+label #cancel{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 1118px){
+  nav img{
+    left: 8%;
+  }
+}
+@media (max-width: 944px){
+  nav img{
+    width: 130px;
+		top: 20px;
+		left: 6%;
+  }
+	nav ul li a{
+		font-size: 17px;
+		color: white;
+	}
+}
+@media (max-width: 860px){
+  label #btn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(60, 60, 60, 0.8);
+    top: 54px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    z-index: 1;
+  }
+  nav ul li{
+    display: block;
+    margin: 40px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 15px;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+	#check:checked ~ label #btn{
+    display: none;
+  }
+	#check:checked ~ label #cancel{
+    display: block;
+  }
+}
+
+
+
+
+
+/*------ music box ------*/
+a{
+	text-decoration: none;
+}
+.container{
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+.box{
+	width: 270px;
+	height: 400px;
+	border-radius: 10px;
+	text-align: center;
+	margin: 20px 20px;
+	transition: all 0.1s;
+	outline: none;
+	-moz-box-shadow: 0 0 10px #ccc;
+  -webkit-box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #ccc;
+}
+
+
+
+/*--------- mouse over button appeared --------------*/
+
+
+.img_description {
+  position: absolute;
+  top: 80%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateZ(50px);
+  transition: opacity .2s, visibility .2s;
+}
+.box:hover .img_description {
+  visibility: visible;
+  opacity: 1;
+  transition: 1s;
+}
+.button {
+  background-color: rgba(120, 120, 120, 0.8);
+  border: 2px solid rgba(120, 120, 120, 0.8);
+  text-shadow: 0 0 3px black, 0 0 5px black;
+  color: white;
+  border-radius: 20px;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Baloo Thambi 2', cursive;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  outline: none;
+}
+.button:hover {
+  background-color: rgba(255, 99, 71, 0.5);
+  color: white;
+  text-shadow: 0 0 3px black, 0 0 5px black;
+  transform: translateY(-5px);
+  -moz-box-shadow: 0 0 20px #ccc;
+  -webkit-box-shadow: 0 0 20px #ccc;
+  box-shadow: 0 0 20px #ccc;
+}
+
+/*--------- mouse over button appeared end --------------*/
+.box:hover{
+	/*filter: brightness(1.21);*/
+	transform: scaleX(1.05);
+	-moz-box-shadow: 0 0 20px #ccc;
+  -webkit-box-shadow: 0 0 20px #ccc;
+  box-shadow: 0 0 20px #ccc;
+}
+h3{
+	margin-top: 10px;
+	font-size: 16px;
+	color: white;
+}
+.box-sub{
+	width: 20%;;
+	height: 30px;
+	line-height: 90px;
+	font-family: 'Baloo Thambi 2', cursive;
+	display: flex;
+	margin-left: 5px;
+	justify-content: left;
+	align-items: center;
+	margin-top: 2%;
+	font-size: 15px;
+	float: left;
+	font-weight: 500;
+	outline: none;
+  color: rgba(255, 255, 255, 0.9);
+	text-shadow: 0 0 3px black, 0 0 5px black;
+}
+.box-sub1{
+	float: left;
+	line-height: 30px;
+	width: 60%;
+	margin-top: 2%;
+	display: flex;
+	font-size: 20px;
+  height: 30px;
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+	outline: none;
+	font-family: 'Baloo Thambi 2', cursive;
+	color: rgba(255, 255, 255, 0.9);
+}
+.h1class{
+	text-align: center;
+	width: 100%;
+	font-family: 'Baloo Thambi 2', cursive;
+	color: rgba(255, 255, 255, 0.9);
+	text-shadow: 0 0 3px black, 0 0 5px black;
+}
+.circle{
+	width: 7%;
+	position: absolute;
+	bottom: 43%;
+	left: 0;
+	margin-left: 2%;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 400;
+	color: white;
+}
+.bg1{
+	background:url(../album1.jpg) no-repeat center center;
+  background-size: cover;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+.bg2{
+	background: url(../album2.jpg) no-repeat center center;
+  background-size: cover;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+.bg3{
+	background: url(../album3.jpg) no-repeat center center;
+  background-size: cover;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+.bg4{
+	background: url(../album4.jpg) no-repeat center center;
+  background-size: cover;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+.bg5{
+	background: url(../album5.jpg) no-repeat center center;
+  background-size: cover;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+.bg6{
+	background: url(../album6.jpg) no-repeat center center;
+  background-size: cover;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+.bg7{
+	background: url(../album7.jpg) no-repeat center center;
+  background-size: cover;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+.bg8{
+	background: url(../album8.jpg) no-repeat center center;
+  background-size: cover;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+.bg9{
+	background: url(../album9.jpg) no-repeat center center;
+  background-size: cover;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+.bg10{
+	background: url(../album10.jpg) no-repeat center center;
+  background-size: cover;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+.bg11{
+	background: url(../album11.jpg) no-repeat center center;
+	background-size: cover;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}.bg12{
+	background: url(../album12.jpg) no-repeat center center;
+	background-size: cover;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+.bg13{
+	background: url(../album13.jpg) no-repeat center center;
+	background-size: cover;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+.bg14{
+	background: url(../album14.jpg) no-repeat center center;
+	background-size: cover;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+.bg15{
+	background: url(../album15.jpg) no-repeat center center;
+	background-size: cover;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+.bg16{
+	background: url(../album16.jpg) no-repeat center center;
+	background-size: cover;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+.bg17{
+	background: url(../album17.jpg) no-repeat center center;
+	background-size: cover;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+.c1{
+	background: linear-gradient(to top, red, orange, white);
+	box-shadow: 0px 0px 10px 2px red;
+}
+.c2{
+	background: linear-gradient(to top, purple, blue, pink);
+	box-shadow: 0px 0px 10px 2px purple;
+}
+.c3{
+	background: linear-gradient(to top, green, darkgreen, white);
+	box-shadow: 0px 0px 10px 2px green;
+}
+/*--------- music box end ------------*/
+
+
+
+/*----- Footer -----*/
+
+
+footer{
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+}
+.social-icon a{
+  margin: 0 0px 0px 0px;
+  display: inline-block;
+}
+.social-icon .fab{
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  /* text-shadow: 3px 3px 6px rgb(240, 240, 240); */
+  width: 30px;
+  height: 405;
+  background: transparent;
+  line-height: 1.7;
+  transition: .1s;
+}
+.social-icon .fab:hover{
+  text-shadow: 3px 3px 6px rgb(240, 240, 240);
+}
+.social-icon #facebook:hover{
+  color: #4267B2;
+}
+.social-icon #twitter:hover{
+  color: #00acee;
+}
+.social-icon #instagram:hover{
+  color: #C13584;
+}
+.social-icon #youtube:hover{
+  color: #FF0000;
+}
+.social-icon a:hover .fab{
+  transform: translateY(-5px);
+}
+.white{
+  color: rgb(180, 180, 180);
+  font-size: 10px;
+  font-weight: bold;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+.footertext{
+  font-family: 'Baloo Thambi 2', cursive;
+  color: rgb(180, 180, 180);
+  font-size: 12px;
+}
+
+/*----- Footer end -----*/
+
+.progress-container {
+  width: 100%;
+  height: 3px;
+  background: transparent;
+}
+
+.progress-bar {
+  height: 3px;
+  background: orange;
+  width: 0%;
+}
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+
+
+/*------ go to top button --------*/
+
+#button {
+	display: inline-block;
+	width: 56px;
+	height: 55px;
+	text-align: center;
+	border-radius: 10px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+	outline: none;
+  }
+  #button::after {
+	content: "\f077";
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2em;
+	line-height: 50px;
+	color: #fff;
+  }
+  #button:hover {
+	cursor: pointer;
+	-moz-text-shadow: 0 0 50px #ccc;
+	-webkit-text-shadow: 0 0 50px #ccc;
+	text-shadow: 0 0 50px #ccc;
+  }
+  #button.show {
+	opacity: 1;
+	visibility: visible;
+  }
+
+/*------ go to top button end --------*/

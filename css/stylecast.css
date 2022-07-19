@@ -1,0 +1,1178 @@
+body{
+  background-image: url("../images/cast/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+#imghover:hover {
+    -moz-box-shadow: 0 0 20px #ccc;
+      -webkit-box-shadow: 0 0 20px #ccc;
+      box-shadow: 0 0 20px #ccc;
+}
+#blink{
+      transition:2s;
+}
+nav{
+  height: 70px;
+}
+nav img{
+	position: absolute;
+	width: 150px;
+	top: 17px;
+	left: 12%;
+}
+nav ul{
+  float: right;
+  margin-right: 25px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 70px;
+  margin: 0 20px;
+}
+nav ul li a{
+  position: relative;
+  padding: 5px 0;
+  color: rgba(240, 240, 240, 0.6);
+  font-size: 15px;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+/* nav ul li a:hover{
+  	-moz-text-shadow: 0 0 70px white;
+	-webkit-text-shadow: 0 0 70px white;
+	text-shadow: 0 0 70px white;
+}
+nav ul li a:before{
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .4s linear;
+}
+nav ul li a:hover:before{
+  transform: scaleX(1);
+  transform-origin: left;
+} */
+nav ul li a:hover{
+	/* -moz-text-shadow: 0 0 70px white;
+  -webkit-text-shadow: 0 0 70px white;
+  text-shadow: 0 0 70px white; */
+  color: white;
+}
+#blink{
+  transition:2s;
+}
+/* nav ul li a:before{
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .4s linear;
+} */
+/* nav ul li a:hover:before{
+  transform: scaleX(1);
+  transform-origin: right;
+} */
+label #btn,
+label #cancel{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 1118px){
+  nav img{
+    left: 8%;
+  }
+}
+@media (max-width: 944px){
+  nav img{
+    width: 150px;
+		top: 25px;
+		left: 6%;
+  }
+	nav ul li a{
+		font-size: 17px;
+    color: white;
+	}
+}
+@media (max-width: 860px){
+  label #btn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(60, 60, 60, 0.5);
+    top: 65px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    z-index: 1;
+  }
+  nav ul li{
+    display: block;
+    margin: 30px 0;
+    line-height: 52px;
+  }
+  nav ul li a{
+    font-size: 17px;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+	#check:checked ~ label #btn{
+    display: none;
+  }
+	#check:checked ~ label #cancel{
+	display: block;
+	font-size: 35px;;
+  }
+}
+
+/*--------------- cast section ----------------------*/
+
+.maindiv{
+	width: 100%;
+	height: 100%;
+}
+.maindiv a{
+	outline: none;
+}
+.casting{
+	width: 125px;
+	height: 150px;
+	filter: grayscale(100%);
+}
+.casting:hover{
+	filter: grayscale(0%);
+}
+.child1{
+	position: absolute;
+	margin-top: 10%;
+	margin-left: 13%;
+	display: inline-block;
+}
+.david, .brad, .chester, .mike, .rob, .joe{
+	text-decoration: none;
+	font-size: 15px;
+	outline: none;
+	color: white;
+	font-family: 'Baloo Thambi 2', cursive;
+	opacity: 0;
+	transform: translateY(10px);
+	transition: 0.2s all;
+}
+.child1:hover{
+	transform: scale(1.08);
+}
+.child2{
+	position: absolute;
+	margin-left: 26%;
+	margin-top: 10%;
+	display: inline-block;
+}
+.child2:hover{
+	transform: scale(1.08);
+	opacity: 9;
+}
+.child3{
+	position: absolute;
+	margin-left:39%;
+	margin-top: 10%;
+	display: inline-block;
+}
+.child3:hover{
+	transform: scale(1.08);
+	opacity: 9;
+}
+.child4{
+	position: absolute;
+	margin-left:52%;
+	margin-top: 10%;
+	display: inline-block;
+}
+.child4:hover{
+	transform: scale(1.08);
+	opacity: 9;
+}
+.child5{
+	position: absolute;
+	margin-left:64%;
+	margin-top: 10%;
+	display: inline-block;
+}
+.child5:hover{
+	transform: scale(1.08);
+	opacity: 9;
+}
+.child6{
+	position: absolute;
+	margin-left:77%;
+	margin-top: 10%;
+	display: inline-block;
+}
+.child6:hover{
+	transform: scale(1.08);
+	opacity: 9;
+}
+@media (max-width: 740px) {
+    .child1, .child2, .child3, .child4, .child5, .child6{
+      display: inline-block;
+      width: 140px;
+      position: relative;
+      margin-left: 0px;
+    }
+    .maindiv{
+	padding-left: 65px;
+	padding-right: 0px;
+	}
+}
+.child1:hover .david{
+	opacity: 1;
+	transform: translateY(-5px);
+	transition: .6s;
+	text-shadow: 0 0 5px white, 0 0 7px white;
+}
+.child2:hover .brad{
+	opacity: 1;
+	transform: translateY(-5px);
+	transition: .6s;
+	text-shadow: 0 0 5px white, 0 0 7px white;
+}
+.child3:hover .chester{
+	opacity: 1;
+	transform: translateY(-5px);
+	transition: .6s;
+	text-shadow: 0 0 5px white, 0 0 7px white;
+}
+.child4:hover .mike{
+	opacity: 1;
+	transform: translateY(-5px);
+	transition: .6s;
+	text-shadow: 0 0 5px white, 0 0 7px white;
+}
+.child5:hover .rob{
+	opacity: 1;
+	transform: translateY(-5px);
+	transition: .6s;
+	text-shadow: 0 0 5px white, 0 0 7px white;
+}
+.child6:hover .joe{
+	opacity: 1;
+	transform: translateY(-5px);
+	transition: .6s;
+	text-shadow: 0 0 5px white, 0 0 7px white;
+}
+a{
+	text-decoration: none;
+}
+
+/*---------------------------------- chester start -----------------------*/
+.firstinfochester{
+	color: white;
+	background-color: rgba(60, 60, 60, 0.3);
+	width: 100%;
+	height: 750px;
+	margin-top: 650px;
+}
+.imgchester{
+	margin-left: 80px;
+	width: 450px;
+	height: 850px;
+	position: absolute;
+	/* opacity: 0.8; */
+	z-index: 1;
+}
+.imgmike2{
+	display: none;
+}
+.firstinfochester:hover .imgchester{
+	filter:blur(0px);
+}
+.infochester1{
+	padding-top: 10px;
+	margin-left: 399px;
+	margin-right: 50px;
+	height: 750px;
+	font-size: 18px;
+	border-radius: 30px;
+	font-family: 'Baloo Thambi 2', cursive;
+}
+.insideinfochester1{
+	position: absolute;
+	padding-left: 130px;
+	width: 76.4%;
+	height: 705px;
+	margin-top: 10px;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.insideinfochester1table td{
+	border-collapse: collapse;
+	font-family: 'Baloo Thambi 2', cursive;
+	border-radius: 20px;
+	padding: 5px;
+}
+.insideinfochester1table{
+	margin-top: 40px;
+	font-size: 15px;
+}
+.chestersmalltable{
+	display: none;
+}
+.chestertd{
+	color: black;
+	font-weight: bold;
+	text-shadow: 0 0 5px white, 0 0 7px white;
+}
+/*----------------  chester small table ------------*/
+.chestersmalltable{
+	color: white;
+	width: 750px;
+	height: auto;
+	font-family: 'Baloo Thambi 2', cursive;
+	margin-left: 600px;
+}
+.chestersmalltable td{
+	padding: 20px;
+}
+.chestersmalltabletd{
+	text-shadow: 0 0 5px white, 0 0 7px white;
+	color: black;
+	font-weight: bold;
+}
+/*--------------- chester small table end ----------------*/
+
+@media (max-width: 740px) {
+    .imgchester{
+	margin-left: 0px;
+	width: 200px;
+	height: 400px;
+	position: absolute;
+	/* opacity: 0.6; */
+	z-index: 0;
+	
+	}
+	.firstinfochester{
+	margin-top: 10px;
+	width: 100%;
+	height: 350px;
+	}
+	.infochester1{
+	padding-top: 10px;
+	margin-left: 0.1px;
+	height: 350px;
+	width: 100%;
+	font-size: 15px;
+	font-family: 'Baloo Thambi 2', cursive;
+	}
+	.insideinfochester1table{
+	display: none;
+	}
+	.chestersmalltable{
+	color: white;
+	width: 285px;
+	height: auto;
+	display: table;
+	font-family: 'Baloo Thambi 2', cursive;
+	padding-right: 10px;
+	margin-left: 1px;
+	margin-top: 30px;
+	font-size: 13px;
+	}
+	.chestersmalltable td{
+	padding: 1px;
+	}
+}
+
+/*----------------- chester end ------------*/
+
+/*---------------------------------- mike start -----------------------*/
+.firstinfomike{
+	color: white;
+	background-color: rgba(60, 60, 60, 0.3);
+	width: 100%;
+	height: 750px;
+	margin-top: 300px;
+}
+.firstinfomike .imgmike{
+	margin-left: 55%;
+	margin-right: 0;
+	width: 45%;
+	height: 800px;
+	position: absolute;
+	/* opacity: 0.8; */
+	z-index: 1;
+}
+.firstinfomike:hover .imgmike{
+	filter:blur(0px);
+}
+.infomike1{
+	padding-top: 10px;
+	margin-left: 50px;
+	margin-right: 500px;
+	height: 750px;
+	font-size: 18px;
+	border-radius: 30px;
+	font-family: 'Baloo Thambi 2', cursive;
+}
+.insideinfomike1{
+	position: absolute;
+	padding-left: 20px;
+	padding-right: 40px;
+	width: 73.2%;
+	height: 702px;
+	margin-top: 10px;
+	z-index: 5;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.insideinfomike1table td{
+	border-collapse: collapse;
+	font-family: 'Baloo Thambi 2', cursive;
+	border-radius: 20px;
+	padding: 5px;
+	z-index: 5;
+}
+.insideinfomike1table{
+	margin-top: 40px;
+	font-size: 15px;
+}
+.mikesmalltable{
+	display: none;
+}
+.link a{
+	text-decoration: none;
+	outline: none;
+	color: white;
+}
+.link:hover{
+	font-weight: bold;
+	color: white;
+}
+.miketd{
+	color: black;
+	font-weight: bold;
+	text-shadow: 0 0 5px white, 0 0 7px white;
+}
+
+@media (max-width: 740px) {
+    .imgmike{
+	display: none;
+	}
+	.imgmike2{
+	margin-left: 18px;
+	width: 400px;
+	overflow-x: hidden;
+	height: 400px;
+	position: absolute;
+	/* opacity: 0.6; */
+	display: table;
+		
+	}
+	.firstinfomike{
+	margin-top: 150px;
+	width: 100%;
+	height: 350px;
+	}
+	.infomike1{
+	padding-top: 10px;
+	margin-left: 0.1px;
+	height: 350px;
+	width: 100%;
+	font-size: 15px;
+	font-family: 'Baloo Thambi 2', cursive;
+	}
+	.insideinfomike1table{
+	display: none;
+	}
+	.mikesmalltable{
+	color: white;
+	width: 350px;
+	height: auto;
+	display: table;
+	font-family: 'Baloo Thambi 2', cursive;
+	padding-right: 10px;
+	margin-left: 1px;
+	margin-top: 30px;
+	font-size: 13px;
+	}
+	.mikesmalltable td{
+	padding: 1px;
+	}
+	.mikesmalltabletd{
+	color: black;
+	font-weight: bold;
+	text-shadow: 0 0 5px white, 0 0 7px white;
+	}
+}
+/*----------------- mike end ------------*/
+
+
+
+
+/*---------------------------------- dave start -----------------------*/
+.firstinfodave{
+	color: white;
+	background-color: rgba(60, 60, 60, 0.3);
+	width: 100%;
+	height: 750px;
+	margin-top: 300px;
+}
+.imgdave{
+	margin-left: 60px;
+	width: 550px;
+	height: 820px;
+	position: absolute;
+	/* opacity: 0.8; */
+	z-index: 1;
+}
+.imgdave2{
+	display: none;
+}
+.firstinfodave:hover .imgdave{
+	filter:blur(0px);
+}
+.infodave1{
+	padding-top: 10px;
+	margin-left: 399px;
+	margin-right: 50px;
+	height: 750px;
+	font-size: 18px;
+	border-radius: 30px;
+	font-family: 'Baloo Thambi 2', cursive;
+}
+.insideinfodave1{
+	position: absolute;
+	padding-left: 130px;
+	width: 76.4%;
+	height: 705px;
+	margin-top: 10px;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.insideinfodave1table td{
+	border-collapse: collapse;
+	font-family: 'Baloo Thambi 2', cursive;
+	border-radius: 20px;
+	padding: 5px;
+}
+.insideinfodave1table{
+	margin-top: 40px;
+	font-size: 15px;
+	z-index: 2;
+	position: relative;
+}
+.davesmalltable{
+	display: none;
+}
+.davetd{
+	color: black;
+	font-weight: bold;
+	text-shadow: 0 0 5px white, 0 0 7px white;
+}
+/*----------------  dave small table ------------*/
+.davesmalltable{
+	color: white;
+	width: 750px;
+	height: auto;
+	font-family: 'Baloo Thambi 2', cursive;
+	margin-left: 600px;
+}
+.davesmalltable td{
+	padding: 20px;
+}
+.davesmalltabletd{
+	text-shadow: 0 0 5px white, 0 0 7px white;
+	color: black;
+	font-weight: bold;
+}
+/*--------------- dave small table end ----------------*/
+
+@media (max-width: 740px) {
+    .imgdave{
+	margin-left: 0px;
+	width: 260px;
+	height: 400px;
+	position: absolute;
+	/* opacity: 0.6; */
+	z-index: 0;
+	
+	}
+	.firstinfodave{
+	margin-top: 160px;
+	width: 100%;
+	height: 350px;
+	}
+	.infodave1{
+	padding-top: 10px;
+	margin-left: 0.1px;
+	height: 350px;
+	width: 100%;
+	font-size: 15px;
+	font-family: 'Baloo Thambi 2', cursive;
+	}
+	.insideinfodave1table{
+		display: none;
+	}
+	.davesmalltable{
+	color: white;
+	width: 285px;
+	height: auto;
+	display: table;
+	font-family: 'Baloo Thambi 2', cursive;
+	padding-right: 0px;
+	margin-left: 1px;
+	margin-top: 30px;
+	font-size: 12.8px;
+	}
+	.davesmalltable td{
+	padding: 1px;
+	}
+}
+
+/*----------------- dave end ------------*/
+
+
+/*---------------------------------- brad start -----------------------*/
+.firstinfobrad{
+	color: white;
+	background-color: rgba(60, 60, 60, 0.3);
+	width: 100%;
+	height: 750px;
+	margin-top: 300px;
+}
+.imgbrad2{
+	display: none;
+}
+.firstinfobrad .imgbrad{
+	margin-left: 60%;
+	margin-right: 0;
+	width: 33%;
+	height: 800px;
+	position: absolute;
+	/* opacity: 0.8; */
+	z-index: 1;
+}
+.firstinfobrad:hover .imgbrad{
+	filter:blur(0px);
+}
+.infobrad1{
+	padding-top: 10px;
+	margin-left: 50px;
+	margin-right: 500px;
+	height: 750px;
+	font-size: 18px;
+	border-radius: 30px;
+	font-family: 'Baloo Thambi 2', cursive;
+}
+.insideinfobrad1{
+	position: absolute;
+	padding-left: 20px;
+	padding-right: 40px;
+	width: 73.2%;
+	height: 702px;
+	margin-top: 10px;
+	z-index: 5;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.insideinfobrad1table td{
+	border-collapse: collapse;
+	font-family: 'Baloo Thambi 2', cursive;
+	border-radius: 20px;
+	padding: 5px;
+	z-index: 5;
+}
+.insideinfobrad1table{
+	margin-top: 40px;
+	font-size: 15px;
+}
+.bradsmalltable{
+	display: none;
+}
+.link a{
+	text-decoration: none;
+	outline: none;
+	color: white;
+}
+.link:hover{
+	font-weight: bold;
+	color: white;
+}
+.bradtd{
+	color: black;
+	font-weight: bold;
+	text-shadow: 0 0 5px white, 0 0 7px white;
+}
+
+@media (max-width: 740px) {
+    .imgbrad{
+	display: none;
+	}
+	.imgbrad2{
+	margin-left: 125px;
+	width: 290px;
+	overflow-x: hidden;
+	height: 400px;
+	position: absolute;
+	/* opacity: 0.6; */
+	z-index: 1;
+	display: table;
+		
+	}
+	.firstinfobrad{
+	margin-top: 150px;
+	width: 100%;
+	height: 350px;
+	}
+	.infobrad1{
+	padding-top: 10px;
+	margin-left: 0.1px;
+	height: 350px;
+	width: 100%;
+	font-size: 15px;
+	font-family: 'Baloo Thambi 2', cursive;
+	}
+	.insideinfobrad1table{
+		display: none;
+	}
+	.bradsmalltable{
+	color: white;
+	width: 350px;
+	height: auto;
+	display: table;
+	font-family: 'Baloo Thambi 2', cursive;
+	padding-right: 10px;
+	margin-left: 1px;
+	margin-top: 30px;
+	font-size: 13px;
+	}
+	.bradsmalltable td{
+	padding: 1px;
+	}
+	.bradsmalltabletd{
+	color: black;
+	font-weight: bold;
+	text-shadow: 0 0 5px white, 0 0 7px white;
+	}
+}
+/*----------------- brad end ------------*/
+
+
+
+/*---------------------------------- rob start -----------------------*/
+.firstinforob{
+	color: white;
+	background-color: rgba(60, 60, 60, 0.3);
+	width: 100%;
+	height: 750px;
+	margin-top: 300px;
+}
+.imgrob{
+	margin-left: 60px;
+	width: 500px;
+	height: 820px;
+	position: absolute;
+	/* opacity: 0.8; */
+	z-index: 1;
+}
+.p1{
+	z-index: 2;
+	position: absolute;
+	text-shadow: 0 0 5px white, 0 0 7px white;
+}
+.imgrob2{
+	display: none;
+}
+.firstinforob:hover .imgrob{
+	filter:blur(0px);
+}
+.inforob1{
+	padding-top: 10px;
+	margin-left: 399px;
+	margin-right: 50px;
+	height: 750px;
+	font-size: 18px;
+	border-radius: 30px;
+	font-family: 'Baloo Thambi 2', cursive;
+}
+.insideinforob1{
+	position: absolute;
+	padding-left: 130px;
+	width: 76.4%;
+	height: 705px;
+	margin-top: 10px;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.insideinforob1table td{
+	border-collapse: collapse;
+	font-family: 'Baloo Thambi 2', cursive;
+	border-radius: 20px;
+	padding: 5px;
+}
+.insideinforob1table{
+	margin-top: 40px;
+	font-size: 15px;
+	z-index: 2;
+	position: relative;
+}
+.robsmalltable{
+	display: none;
+}
+.robtd{
+	color: black;
+	font-weight: bold;
+	text-shadow: 0 0 5px white, 0 0 7px white;
+}
+/*----------------  dave small table ------------*/
+.robsmalltable{
+	color: white;
+	width: 750px;
+	height: auto;
+	font-family: 'Baloo Thambi 2', cursive;
+	margin-left: 600px;
+}
+.robsmalltable td{
+	padding: 20px;
+}
+.robsmalltabletd{
+	text-shadow: 0 0 5px white, 0 0 7px white;
+	color: black;
+	font-weight: bold;
+}
+/*--------------- rob small table end ----------------*/
+
+@media (max-width: 740px) {
+    .imgrob{
+	margin-left: 0px;
+	width: 260px;
+	height: 400px;
+	position: absolute;
+	/* opacity: 0.6; */
+	z-index: 0;
+	
+	}
+	.firstinforob{
+	margin-top: 160px;
+	width: 100%;
+	height: 350px;
+	}
+	.inforob1{
+	padding-top: 10px;
+	margin-left: 0.1px;
+	height: 350px;
+	width: 100%;
+	font-size: 15px;
+	font-family: 'Baloo Thambi 2', cursive;
+	}
+	.insideinforob1table{
+		display: none;
+	}
+	.robsmalltable{
+	color: white;
+	width: 285px;
+	height: auto;
+	display: table;
+	font-family: 'Baloo Thambi 2', cursive;
+	padding-right: 0px;
+	margin-left: 1px;
+	margin-top: 30px;
+	font-size: 12.8px;
+	}
+	.robsmalltable td{
+	padding: 1px;
+	}
+}
+
+/*----------------- rob end ------------*/
+
+
+
+/*---------------------------------- joe start -----------------------*/
+.firstinfojoe{
+	color: white;
+	background-color: rgba(60, 60, 60, 0.3);
+	width: 100%;
+	height: 750px;
+	margin-top: 300px;
+}
+.imgjoe2{
+	display: none;
+}
+.firstinfojoe .imgjoe{
+	margin-left: 75%;
+	margin-right: 0;
+	width: 16%;
+	height: 800px;
+	position: absolute;
+	/* opacity: 0.8; */
+	z-index: 1;
+}
+.firstinfojoe:hover .imgjoe{
+	filter:blur(0px);
+}
+.infojoe1{
+	padding-top: 10px;
+	margin-left: 50px;
+	margin-right: 500px;
+	height: 750px;
+	font-size: 18px;
+	border-radius: 30px;
+	font-family: 'Baloo Thambi 2', cursive;
+}
+.insideinfojoe1{
+	position: absolute;
+	padding-left: 20px;
+	padding-right: 40px;
+	width: 73.2%;
+	height: 702px;
+	margin-top: 10px;
+	z-index: 5;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.insideinfojoe1table td{
+	border-collapse: collapse;
+	font-family: 'Baloo Thambi 2', cursive;
+	border-radius: 20px;
+	padding: 5px;
+	z-index: 5;
+}
+.insideinfojoe1table{
+	margin-top: 40px;
+	font-size: 15px;
+}
+.joesmalltable{
+	display: none;
+}
+.link a{
+	text-decoration: none;
+	outline: none;
+	color: white;
+}
+.link:hover{
+	font-weight: bold;
+	color: white;
+}
+.joetd{
+	color: black;
+	font-weight: bold;
+	text-shadow: 0 0 5px white, 0 0 7px white;
+}
+
+@media (max-width: 740px) {
+    .imgjoe{
+	display: none;
+	}
+	.imgjoe2{
+	margin-left: 240px;
+	width: 140px;
+	overflow-x: hidden;
+	height: 400px;
+	position: absolute;
+	/* opacity: 0.6; */
+	z-index: 1;
+	display: table;
+		
+	}
+	.firstinfojoe{
+	margin-top: 150px;
+	width: 100%;
+	height: 350px;
+	}
+	.infojoe1{
+	padding-top: 10px;
+	margin-left: 0.1px;
+	height: 350px;
+	width: 100%;
+	font-size: 15px;
+	font-family: 'Baloo Thambi 2', cursive;
+	}
+	.insideinfojoe1table{
+	display: none;
+	}
+	.joesmalltable{
+	color: white;
+	width: 350px;
+	height: auto;
+	display: table;
+	font-family: 'Baloo Thambi 2', cursive;
+	padding-right: 10px;
+	margin-left: 1px;
+	margin-top: 30px;
+	font-size: 13px;
+	}
+	.joesmalltable td{
+	padding: 1px;
+	}
+	.joesmalltabletd{
+	color: black;
+	font-weight: bold;
+	text-shadow: 0 0 5px white, 0 0 7px white;
+	}
+}
+/*----------------- joe end ------------*/
+
+
+
+/*--------------- cast section end -----------------*/
+
+
+
+
+
+
+/*----- Footer -----*/
+footer{
+  margin-top: 100px;
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+}
+.social-icon a{
+  margin: 0 0px 0px 0px;
+  display: inline-block;
+}
+.social-icon .fab{
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	/* text-shadow: 3px 3px 6px rgb(240, 240, 240); */
+	width: 30px;
+	height: 405;
+	background: transparent;
+	line-height: 1.7;
+	transition: .1s;
+  }
+  .social-icon .fab:hover{
+	text-shadow: 3px 3px 6px rgb(240, 240, 240);
+  }
+.social-icon #facebook:hover{
+	color: #4267B2;
+  }
+  .social-icon #twitter:hover{
+	color: #00acee;
+  }
+  .social-icon #instagram:hover{
+	color: #C13584;
+  }
+  .social-icon #youtube:hover{
+	color: #FF0000;
+  }
+.social-icon a:hover .fab{
+  transform: translateY(-5px);
+}
+.white{
+  color: rgb(180, 180, 180);
+  font-size: 10px;
+  font-weight: bold;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+.footertext{
+  font-family: 'Baloo Thambi 2', cursive;
+  color: rgb(180, 180, 180);
+  font-size: 12px;
+}
+@media (max-width: 740px) {
+    footer{
+    	margin-top: 100px;
+    	position: absolute;
+    }
+}
+
+/*----- Footer -----*/
+
+.progress-container {
+  width: 100%;
+  height: 3px;
+  background: transparent;
+}
+
+.progress-bar {
+  height: 3px;
+  background: orange;
+  width: 0%;
+}
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+}
+
+/*------ go to top button --------*/
+
+#button {
+	display: inline-block;
+	width: 56px;
+	height: 55px;
+	text-align: center;
+	border-radius: 10px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+	outline: none;
+  }
+  #button::after {
+	content: "\f077";
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2em;
+	line-height: 50px;
+	color: #fff;
+  }
+  #button:hover {
+	cursor: pointer;
+	-moz-text-shadow: 0 0 50px #ccc;
+	-webkit-text-shadow: 0 0 50px #ccc;
+	text-shadow: 0 0 50px #ccc;
+  }
+  #button.show {
+	opacity: 1;
+	visibility: visible;
+  }
+
+/*------ go to top button end --------*/

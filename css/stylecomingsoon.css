@@ -1,0 +1,132 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg {
+  background-image: url('../images/comingsoon/img.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: 'Baloo Thambi 2', cursive;
+  font-size: 25px;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+.topleft img{
+  width: 160px;
+  height: 40px;
+  margin-left: 150px;
+}
+.topleft img:hover{
+  -moz-box-shadow: 0 0 20px #ccc;
+  -webkit-box-shadow: 0 0 20px #ccc;
+  box-shadow: 0 0 20px #ccc;
+}
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+  }
+#demo{
+  -moz-text-shadow: 0 0 20px #ccc;
+  -webkit-text-shadow: 0 0 20px #ccc;
+  text-shadow: 0 0 20px #ccc;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  -moz-text-shadow: 0 0 50px #ccc;
+  -webkit-text-shadow: 0 0 50px #ccc;
+  text-shadow: 0 0 50px #ccc;
+}
+
+hr {
+  margin: auto;
+  width: 50%;
+}
+
+/*----- Footer -----*/
+
+
+footer{
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+}
+.social-icon a{
+  margin: 0 0px 0px 0px;
+  display: inline-block;
+}
+.social-icon .fab{
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  /* text-shadow: 3px 3px 6px rgb(240, 240, 240); */
+  width: 30px;
+  height: 405;
+  background: transparent;
+  line-height: 1.7;
+  transition: .1s;
+}
+.social-icon .fab:hover{
+  text-shadow: 3px 3px 6px rgb(240, 240, 240);
+}
+.social-icon #facebook:hover{
+  color: #4267B2;
+}
+.social-icon #twitter:hover{
+  color: #00acee;
+}
+.social-icon #instagram:hover{
+  color: #C13584;
+}
+.social-icon #youtube:hover{
+  color: #FF0000;
+}
+.social-icon a:hover .fab{
+  transform: translateY(-5px);
+}
+.white{
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+ font-family: 'Baloo Thambi 2', cursive;
+}
+.footertext{
+  font-family: 'Baloo Thambi 2', cursive;
+  color: white;
+  font-size: 12px;
+}
+
+
+/*----- Footer -----*/
+
+
+.progress-container {
+  width: 100%;
+  height: 3px;
+  background: transparent;
+}
+
+.progress-bar {
+  height: 3px;
+  background: orange;
+  width: 0%;
+}
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}

@@ -1,0 +1,376 @@
+*{
+  padding: 0;
+  margin: 0;
+	list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+#imghover:hover {
+    -moz-box-shadow: 0 0 20px #ccc;
+      -webkit-box-shadow: 0 0 20px #ccc;
+      box-shadow: 0 0 20px #ccc;
+}
+#blink{
+      transition:2s;
+}
+body{
+  background-image: url("../images/album/album12/Reanimation (Remix)bg.jpg");
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-attachment: fixed;
+}
+nav{
+  height: 70px;
+}
+nav img{
+	position: absolute;
+	width: 150px;
+	top: 17px;
+	left: 12%;
+}
+nav ul{
+  float: right;
+  margin-right: 25px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 70px;
+  margin: 0 20px;
+}
+nav ul li a{
+  position: relative;
+  padding: 5px 0;
+  color: rgb(240, 240, 240);
+  font-size: 15px;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+nav ul li a:hover{
+  color: white;
+}
+/* nav ul li a:hover{
+  -moz-text-shadow: 0 0 70px white;
+  -webkit-text-shadow: 0 0 70px white;
+  text-shadow: 0 0 70px white;
+}
+nav ul li a:before{
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+	background: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .4s linear;
+}
+nav ul li a:hover:before{
+  transform: scaleX(1);
+  transform-origin: left;
+} */
+label #btn,
+label #cancel{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;  
+}
+@media (max-width: 1118px){
+  nav img{
+    left: 8%;
+  }
+}
+@media (max-width: 944px){
+  nav img{
+    width: 130px;
+		top: 20px;
+		left: 6%;
+  }
+	nav ul li a{
+		font-size: 17px;
+    color: white;
+	}
+}
+@media (max-width: 860px){
+  label #btn{
+    display: block;
+  }
+  ul{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(60, 60, 60, 0.5);
+    top: 52px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    z-index: 1;
+  }
+  nav ul li{
+    display: block;
+    margin: 30px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 15px;
+  }
+  #check:checked ~ ul{
+    left: 0;
+    
+  }
+	#check:checked ~ label #btn{
+    display: none;
+  }
+	#check:checked ~ label #cancel{
+    display: block;
+  }
+}
+/*----- Footer -----*/
+
+
+footer{
+  margin-top: 800px;
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+}
+.social-icon a{
+  margin: 0 0px 0px 0px;
+  display: inline-block;
+}
+.social-icon .fab{
+  font-size: 18px;
+  color: rgb(60, 60, 60);
+  text-shadow: 3px 3px 6px rgb(240, 240, 240);
+  width: 30px;
+  height: 405;
+  /*border-radius: 60%;*/
+  background: transparent;
+  line-height: 1.7;
+  transition: .1s;
+}
+.social-icon .fab:hover{
+  color: rgb(255, 255, 255);
+}
+.social-icon a:hover .fab{
+  transform: translateY(-5px);
+}
+.white{
+  color: rgb(180, 180, 180);
+  font-size: 10px;
+  font-weight: bold;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+.footertext{
+  font-family: 'Baloo Thambi 2', cursive;
+  color: rgb(180, 180, 180);
+  font-size: 12px;
+}
+
+
+/*----- Footer -----*/
+
+/*------ album songs start ------*/
+
+
+
+#playlist{
+  display: contents;
+}
+#playlist li a{
+  color:rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+#playlist .current-song a{
+  color:rgb(224, 113, 113);
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+.musicplayer{
+  width: 352px;
+  height: 860px;
+  /* background-color: rgba(119, 118, 118, 0.3); */
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-top: 100px;
+}
+.albumart img{
+  width: 352px;
+  height: 350px;
+  
+}
+.albumtitle{
+  color: rgb(255, 255, 255);
+  position: absolute;
+  z-index: 10;
+  margin-top: -60px;
+  margin-left: 50px;
+  width: 250px;
+  text-align: center;
+  line-height: 20px;
+  padding: 10px; 
+  font-size: 20px;
+  height: 40px;
+  font-family: 'Baloo Thambi 2', cursive;
+  background:
+    linear-gradient(to right, rgb(212, 208, 208) 2px, transparent 2px) 0 0,
+    linear-gradient(to left, rgb(212, 208, 208) 2px, transparent 2px) 100% 100%,
+    linear-gradient(to bottom, rgb(212, 208, 208) 2px, transparent 2px) 0 0,
+    linear-gradient(to top, rgb(212, 208, 208) 2px, transparent 2px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  transform: translateZ(50px);
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+.albumart{
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+.albumart img:hover{
+  -moz-box-shadow: 0 0 20px #ccc;
+  -webkit-box-shadow: 0 0 20px #ccc;
+  box-shadow: 0 0 20px #ccc;
+}
+.audioplayer{
+  outline: none;
+  width: 350px;
+}
+.songs{
+  padding-left: 50px;
+  margin-bottom: 5px;
+}
+.songs:hover{
+  background-color: rgba(167, 162, 162, 0.301);
+  -moz-text-shadow: 0 0 20px #ccc;
+  -webkit-text-shadow: 0 0 20px #ccc;
+  text-shadow: 0 0 20px #ccc;
+}
+.controls{
+  text-align: center;
+}
+.controls img{
+  display: inline;
+  color: white;
+}
+.controlsimg:hover{
+  opacity: 0.2;
+}
+.backto{
+  color: white;
+  float: left;
+  text-decoration: none;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+.backto a{
+  text-decoration: none;
+  outline: none;
+  color: white;
+}
+@media screen and (max-width: 900px) and (min-width: 350px){
+  .albumart img{
+    width: 300px;
+    height: 300px;
+  }
+  .albumart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+  }
+  .audioplayer{ 
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  .songs{
+    padding-left: 10px;
+    margin-bottom: 5px;
+  }
+  .musicplayer{
+    height: 830px;
+    padding-top: 10px;
+    /* background-color: rgba(119, 118, 118, 0.3); */
+  }
+  .albumtitle{
+    margin-top: 110px;
+    width: 170px;
+    left: 26px;
+    line-height: 20px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.795);
+  }
+}
+/*----- album songs end -----*/
+
+
+
+.progress-container {
+  width: 100%;
+  height: 3px;
+  background: transparent;
+}
+
+.progress-bar {
+  height: 3px;
+  background: orange;
+  width: 0%;
+}
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+
+/*------ go to top button --------*/
+
+#button {
+	display: inline-block;
+	width: 56px;
+	height: 55px;
+	text-align: center;
+	border-radius: 10px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+	outline: none;
+  }
+  #button::after {
+	content: "\f077";
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2em;
+	line-height: 50px;
+	color: #fff;
+  }
+  #button:hover {
+	cursor: pointer;
+	-moz-text-shadow: 0 0 50px #ccc;
+	-webkit-text-shadow: 0 0 50px #ccc;
+	text-shadow: 0 0 50px #ccc;
+  }
+  #button.show {
+	opacity: 1;
+	visibility: visible;
+  }
+
+/*------ go to top button end --------*/

@@ -1,0 +1,594 @@
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');*/
+*{
+  padding: 0;
+  margin: 0;
+	list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+#imghover:hover {
+    -moz-box-shadow: 0 0 20px #ccc;
+      -webkit-box-shadow: 0 0 20px #ccc;
+      box-shadow: 0 0 20px #ccc;
+}
+#blink{
+      transition:2s;
+}
+
+
+
+
+
+
+/* -----preloader start------- */
+
+.pace {
+  pointer-events: none;
+  user-select: none;
+  z-index: 20000;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 400px;
+  border: 0px;
+  height: 1px;
+  overflow: hidden;
+  background:#1b1b1b;
+}
+
+.pace .pace-progress {
+  box-sizing: border-box;
+  transform: translate3d(0, 0, 0);
+  max-width: 400px;
+  position: fixed;
+  z-index: 20000;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  height: 100%;
+  width: 100%;
+  background: grey;
+}
+
+.pace.pace-inactive {
+  display: none;
+}
+
+#preloader{
+  width:100%;
+  height:100vh;
+  background:#101010;
+  overflow:hidden;
+  position:fixed;
+  z-index: 2000;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.p {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  font-family: 'Baloo Thambi 2', cursive;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  letter-spacing: 10px;
+}
+
+
+/* --------- preloader end------------- */
+
+
+
+body{
+  /*background-color: rgb(149, 181, 148);*/
+  /*background: rgb(0,0,0);
+background: linear-gradient(86deg, rgba(0,0,0,0.7791491596638656) 100%, 
+  rgba(235,225,225,0.9472163865546218) 100%, rgba(0,0,0,0.7791491596638656) 100%);*/
+  /* background-image: url("../images/bg.jpg");
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-attachment: fixed; */
+}
+nav{
+  height: 70px;
+  /* background: rgba(60, 60, 60, 0.5); */
+  z-index: 20;
+  position: relative;
+}
+nav img{
+	position: absolute;
+	width: 150px;
+	top: 17px;
+	left: 12%;
+}
+nav ul{
+  float: right;
+  margin-right: 25px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 70px;
+  margin: 0 20px;
+}
+nav ul li a{
+  position: relative;
+  padding: 5px 0;
+  /* color: rgba(240, 240, 240, 0.6); */
+  color: white;
+  font-size: 15px;
+  font-family: 'Baloo Thambi 2', cursive;
+  /* text-transform: uppercase; */
+}
+/* nav ul li a:hover{
+  -moz-text-shadow: 0 0 70px white;
+   -webkit-text-shadow: 0 0 70px white;
+      text-shadow: 0 0 70px white;
+}
+nav ul li a:before{
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+	background: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .4s linear;
+}
+nav ul li a:hover:before{
+  transform: scaleX(1);
+  transform-origin: left;
+} */
+nav ul li a:hover{
+	/* -moz-text-shadow: 0 0 70px white;
+  -webkit-text-shadow: 0 0 70px white;
+  text-shadow: 0 0 70px white; */
+  color: white;
+}
+#blink{
+  transition:2s;
+}
+/* nav ul li a:before{
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .4s linear;
+} */
+/* nav ul li a:hover:before{
+  transform: scaleX(1);
+  transform-origin: right;
+} */
+label #btn,
+label #cancel{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 1118px){
+  nav img{
+    left: 8%;
+  }
+}
+@media (max-width: 944px){
+  nav img{
+    width: 130px;
+		top: 20px;
+		left: 6%;
+  }
+	nav ul li a{
+		font-size: 17px;
+    color: white;
+	}
+}
+@media (max-width: 860px){
+  label #btn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(60, 60, 60, 0.5);
+    top: 52px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    z-index: 1;
+  }
+  nav ul li{
+    display: block;
+    margin: 30px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 15px;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+	#check:checked ~ label #btn{
+    display: none;
+  }
+	#check:checked ~ label #cancel{
+    display: block;
+  }
+}
+/*----- Footer -----*/
+
+
+footer{
+  margin-top: 20px;
+  /*padding-left: 40%;*/
+  width: 100%;
+  /* margin-top: 40%; */
+  position: relative;
+  z-index: 10;
+  /* padding-top: 50px; */
+  text-align: center;
+  background-color: transparent;
+}
+.social-icon a{
+  margin: 0 0px 0px 0px;
+  display: inline-block;
+}
+.social-icon .fab{
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  /* text-shadow: 3px 3px 6px rgb(240, 240, 240); */
+  width: 30px;
+  height: 405;
+  background: transparent;
+  line-height: 1.7;
+  transition: .1s;
+}
+.social-icon .fab:hover{
+  text-shadow: 3px 3px 6px rgb(240, 240, 240);
+}
+.social-icon #facebook:hover{
+  color: #4267B2;
+}
+.social-icon #twitter:hover{
+  color: #00acee;
+}
+.social-icon #instagram:hover{
+  color: #C13584;
+}
+.social-icon #youtube:hover{
+  color: #FF0000;
+}
+.social-icon a:hover .fab{
+  /*border: 3px solid rgb(255, 255, 255);*/
+  transform: translateY(-5px);
+}
+.white{
+  color: rgb(180, 180, 180);
+  font-size: 10px;
+  font-weight: bold;
+  font-family: 'Baloo Thambi 2', cursive;
+}
+.footertext{
+  font-family: 'Baloo Thambi 2', cursive;
+  color: rgb(180, 180, 180);
+  font-size: 12px;
+}
+
+
+/*----- Footer -----*/
+
+/*------ chester ------*/
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  filter: grayscale(100%);
+}
+#coloroverlay{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: lightblue;
+  min-width: 100%;
+  opacity: 0.4;
+  min-height: 100%;
+}
+.chestertitle{
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  font-size: 35px;
+  /* font-family: 'Baloo Thambi 2', cursive; */
+}
+.chesterimg{
+  width: 600px;
+  height: 849px;
+  /* opacity: 0.8; */
+  position: absolute;
+  z-index: 1;
+  filter: grayscale(100%);
+  background-attachment: fixed;
+}
+.chesterdiv{
+  /* background-color: red; */
+  height: 750px;
+  width: 30%;
+  float: left;
+}
+.chestersubdiv{
+  float: right;
+  /* background-color: white; */
+  height: 750px;
+  /* opacity: 0.2; */
+  width:  69%;
+  position: relative;
+  z-index: 10;
+  margin-right: 2px;
+  text-align: center;
+}
+.chestersubdiv img{
+  width: 180px;
+  /* position: absolute; */
+  height: 200px;
+}
+.chestersubdiv h1{
+  color: white;
+  letter-spacing: 5px;
+  /* position: absolute; */
+  margin-top: 30px;
+  /* margin:auto; */
+}
+.chestersubdiv2{
+  /* background-color: red; */
+  background-color: rgba(70, 69, 69, 0.253);
+  width: 67%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 150px;
+  /* z-index: 2; */
+  position: relative;
+  border: 2px solid white;
+}
+.chestertext{
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  padding: 10px;
+  /* position: relative; */
+}
+.chestertext a{
+  text-decoration: underline;
+  color: white;
+}
+.chestertext a:hover{
+  color: rgb(206, 204, 204);
+}
+@media screen and (max-width: 900px) and (min-width: 330px){
+  .chesterimg{
+    width: 270px;
+    height: 400px;
+    opacity: 0.8;
+    /* position: absolute; */
+    /* z-index: 1; */
+    /* filter: grayscale(100%);
+    background-attachment: fixed; */
+  }
+  .chestertitle{
+    color: white;
+    /* text-align: center; */
+    font-size: 15px;
+    /* font-family: 'Baloo Thambi 2', cursive; */
+  }
+  .chestertext{
+    /* color: white; */
+    /* width: 150%; */
+    font-size: 12px;
+    /* text-align: center; */
+    /* padding: 10px; */
+    /* position: relative; */
+  }
+  .chestersubdiv2{
+    background-color: rgba(70, 69, 69, 0.253);
+    width: 120%;
+    margin-left: -80px;
+    /* margin-right: auto; */
+    /* display: block; */
+    margin-top: 10px;
+    /* z-index: 2; */
+    /* position: relative; */
+    /* border: 2px solid white; */
+  }
+  .chestersubdiv h1{
+    /* color: white; */
+    letter-spacing: 5px;
+    font-size: 10px;
+    /* position: absolute; */
+    margin-top: -35px;
+    /* margin:auto; */
+  }
+  .chestersubdiv img{
+    width: 100px;
+    /* position: absolute; */
+    height: 120px;
+  }
+  footer{
+    margin-top: 410px;
+    /* z-index: 100; */
+    /*padding-left: 40%;*/
+    /* width: 100%; */
+    /* margin-top: 40%; */
+    /* z-index: 200; */
+    position: absolute;
+    /* padding-top: 50px; */
+    /* text-align: center; */
+    /* background-color: transparent; */
+  }
+  body{
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 1920px) and (min-width: 900px){
+  .chesterimg{
+    width: 620px;
+    height: 870px;
+    opacity: 0.8;
+    /* position: absolute; */
+    /* z-index: 1; */
+    /* filter: grayscale(100%);
+    background-attachment: fixed; */
+  }
+  .chestertitle{
+    color: white;
+    /* text-align: center; */
+    font-size: 25px;
+    /* font-family: 'Baloo Thambi 2', cursive; */
+  }
+  .chestertext{
+    /* color: white; */
+    /* width: 150%; */
+    font-size: 23px;
+    /* text-align: center; */
+    /* padding: 10px; */
+    /* position: relative; */
+  }
+  .chestersubdiv2{
+    /* background-color: red; */
+    width: 100%;
+    margin-left: -5px;
+    /* margin-right: auto; */
+    /* display: block; */
+    margin-top: 10px;
+    /* z-index: 2; */
+    /* position: relative; */
+    /* border: 2px solid white; */
+  }
+  .chestersubdiv h1{
+    /* color: white; */
+    letter-spacing: 5px;
+    font-size: 20px;
+    /* position: absolute; */
+    margin-top: -20px;
+    /* margin:auto; */
+  }
+  .chestersubdiv img{
+    width: 150px;
+    /* position: absolute; */
+    height: 170px;
+  }
+  footer{
+    margin-top: 600px;
+    /*padding-left: 40%;*/
+    /* width: 100%; */
+    /* margin-top: 40%; */
+    z-index: 10;
+    position: absolute;
+    /* padding-top: 50px; */
+    /* text-align: center; */
+    /* background-color: transparent; */
+  }
+  body{
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  nav ul li a{
+    /* position: relative; */
+    /* padding: 5px 0; */
+    /* color: rgba(240, 240, 240, 0.6); */
+    /* color: white; */
+    font-size: 15px;
+    /* font-family: 'Baloo Thambi 2', cursive; */
+}
+/*----- chester end -----*/
+
+
+
+.progress-container {
+  width: 100%;
+  height: 3px;
+  background: transparent;
+}
+
+.progress-bar {
+  height: 3px;
+  background: orange;
+  width: 0%;
+}
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+
+/*------ go to top button --------*/
+
+#button {
+	display: inline-block;
+	/* background-color: #FF9800; */
+	width: 56px;
+	height: 55px;
+	text-align: center;
+	border-radius: 10px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	/* transition: background-color .3s, 
+	  opacity .5s, visibility .5s; */
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+	outline: none;
+  }
+  #button::after {
+	content: "\f077";
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2em;
+	line-height: 50px;
+	color: #fff;
+  }
+  #button:hover {
+	cursor: pointer;
+	/* background-color: #333; */
+	-moz-text-shadow: 0 0 50px #ccc;
+	-webkit-text-shadow: 0 0 50px #ccc;
+	text-shadow: 0 0 50px #ccc;
+  }
+  #button:active {
+	/* background-color: #555; */
+	/* -moz-box-shadow: 0 0 20px #ccc;
+	-webkit-box-shadow: 0 0 20px #ccc;
+	box-shadow: 0 0 20px #ccc; */
+  }
+  #button.show {
+	opacity: 1;
+	visibility: visible;
+  }
+
+/*------ go to top button end --------*/
